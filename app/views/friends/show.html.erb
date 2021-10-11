@@ -1,0 +1,10 @@
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">
+    <%= @friend.first_name %> <%= @friend.last_name %>
+  </h1>
+  <p class="lead"> <%= @friend.email %> | <%= @friend.phone %> | <%= @friend.username %> </p>
+  <hr class="my-4">
+  <p> <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-outline-secondary btn-sm" %>
+  <%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-secondary btn-sm" %>
+  <%= link_to 'Back', friends_path, class:"btn btn-outline-secondary btn-sm" %> </p>
+</div>
